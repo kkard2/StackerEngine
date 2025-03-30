@@ -96,6 +96,28 @@ public class Board
 
         return null;
     }
+	
+    public Piece? Move(Piece piece, Pos offset)
+    {
+		var new_piece = piece with
+        {
+			Pos = piece.Pos + offset
+		};
+		return CheckCollision(new_piece) ? null : new_piece;
+    }
+
+    public Piece? Dash(Piece piece, Pos offset)
+    {
+        while (true)
+        {
+            var newPiece = Move(piece, offset);
+            if (newPiece == null)
+            {
+                return piece;
+            }
+            piece = newPiece;
+        }
+    }
 
     /// <summary>
     /// This does not check anything.

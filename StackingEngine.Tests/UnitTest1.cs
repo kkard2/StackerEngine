@@ -64,15 +64,13 @@ public class UnitTest1
         var board = new Board();
 
         var i = board.SpawnPiece(Pieces.I);
-        while (!board.CheckCollision(i.Move(Pos.Down)))
-            i = i.Move(Pos.Down);
+        i = board.Dash(i, Pos.Down);
         board.Place(i);
         // ...IIII...
         board.PrintBoard();
 
         var z = board.SpawnPiece(Pieces.Z);
-        while (!board.CheckCollision(z.Move(Pos.Down)))
-            z = z.Move(Pos.Down);
+        z = board.Dash(z, Pos.Down);
         board.Place(z);
         // ...ZZ.....
         // ....ZZ....
@@ -82,10 +80,8 @@ public class UnitTest1
         var l = board.SpawnPiece(Pieces.L);
         l = board.Rotate(l, true);
         Assert.NotNull(l);
-        while (!board.CheckCollision(l.Move(Pos.Left)))
-            l = l.Move(Pos.Left);
-        while (!board.CheckCollision(l.Move(Pos.Down)))
-            l = l.Move(Pos.Down);
+        l = board.Dash(l, Pos.Left);
+        l = board.Dash(l, Pos.Down);
         board.Place(l);
         // L..ZZ.....
         // L...ZZ....
@@ -93,10 +89,8 @@ public class UnitTest1
         board.PrintBoard();
 
         var o = board.SpawnPiece(Pieces.O);
-        while (!board.CheckCollision(o.Move(Pos.Right)))
-            o = o.Move(Pos.Right);
-        while (!board.CheckCollision(o.Move(Pos.Down)))
-            o = o.Move(Pos.Down);
+        o = board.Dash(o, Pos.Right);
+        o = board.Dash(o, Pos.Down);
         board.Place(o);
         // L..ZZ.....
         // L...ZZ..OO
@@ -105,10 +99,9 @@ public class UnitTest1
 
         var s = board.SpawnPiece(Pieces.S);
         s = board.Rotate(s, true);
-        s = s.Move(Pos.Right);
-        s = s.Move(Pos.Right);
-        while (!board.CheckCollision(s.Move(Pos.Down)))
-            s = s.Move(Pos.Down);
+        s = board.Move(s, Pos.Right);
+        s = board.Move(s, Pos.Right);
+        s = board.Dash(s, Pos.Down);
         board.Place(s);
         // L..ZZ.S...
         // L...ZZSSOO
@@ -116,11 +109,9 @@ public class UnitTest1
         board.PrintBoard();
 
         var t = board.SpawnPiece(Pieces.T);
-        while (!board.CheckCollision(t.Move(Pos.Right)))
-            t = t.Move(Pos.Left);
+        t = board.Dash(t, Pos.Left);
         t = board.Rotate(t, true);
-        while (!board.CheckCollision(t.Move(Pos.Down)))
-            t = t.Move(Pos.Down);
+        t = board.Dash(t, Pos.Down);
         t = board.Rotate(t, true);
         board.Place(t);
         board.PrintBoard();

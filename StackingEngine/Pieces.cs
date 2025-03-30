@@ -39,9 +39,9 @@ public static class Pieces
         Name = "I",
         Rotations = new()
         {
-            [Orientation.Up] = new Pos[] { new(0, 1), new(1, 1), new(2, 1), new(3, 1) },
+            [Orientation.Up] = new Pos[] { new(0, 2), new(1, 2), new(2, 2), new(3, 2) },
             [Orientation.Right] = new Pos[] { new(2, 0), new(2, 1), new(2, 2), new(2, 3) },
-            [Orientation.Down] = new Pos[] { new(0, 2), new(1, 2), new(2, 2), new(3, 2) },
+            [Orientation.Down] = new Pos[] { new(0, 1), new(1, 1), new(2, 1), new(3, 1) },
             [Orientation.Left] = new Pos[] { new(1, 0), new(1, 1), new(1, 2), new(1, 3) }
         },
         KickTable = I_KickTable
@@ -65,9 +65,9 @@ public static class Pieces
         Name = "T",
         Rotations = new()
         {
-            [Orientation.Up] = new Pos[] { new(1, 0), new(0, 1), new(1, 1), new(2, 1) },
+            [Orientation.Up] = new Pos[] { new(0, 1), new(1, 1), new(2, 1), new(1, 2) },
             [Orientation.Right] = new Pos[] { new(1, 0), new(1, 1), new(2, 1), new(1, 2) },
-            [Orientation.Down] = new Pos[] { new(0, 1), new(1, 1), new(2, 1), new(1, 2) },
+            [Orientation.Down] = new Pos[] { new(0, 1), new(1, 1), new(2, 1), new(1, 0) },
             [Orientation.Left] = new Pos[] { new(1, 0), new(0, 1), new(1, 1), new(1, 2) }
         },
         KickTable = StandardKickTable
@@ -78,10 +78,10 @@ public static class Pieces
         Name = "J",
         Rotations = new()
         {
-            [Orientation.Up] = new Pos[] { new(0, 0), new(0, 1), new(1, 1), new(2, 1) },
-            [Orientation.Right] = new Pos[] { new(1, 0), new(2, 0), new(1, 1), new(1, 2) },
-            [Orientation.Down] = new Pos[] { new(0, 1), new(1, 1), new(2, 1), new(2, 2) },
-            [Orientation.Left] = new Pos[] { new(1, 0), new(1, 1), new(0, 2), new(1, 2) }
+            [Orientation.Up] = new Pos[] { new(0, 1), new(0, 2), new(1, 1), new(2, 1) },
+            [Orientation.Right] = new Pos[] { new(1, 0), new(1, 1), new(1, 2), new(2, 2) },
+            [Orientation.Down] = new Pos[] { new(0, 1), new(1, 1), new(2, 1), new(2, 0) },
+            [Orientation.Left] = new Pos[] { new(0, 0), new(1, 0), new(1, 1), new(1, 2) }
         },
         KickTable = StandardKickTable
     };
@@ -91,10 +91,10 @@ public static class Pieces
         Name = "L",
         Rotations = new()
         {
-            [Orientation.Up] = new Pos[] { new(2, 0), new(0, 1), new(1, 1), new(2, 1) },
-            [Orientation.Right] = new Pos[] { new(1, 0), new(1, 1), new(1, 2), new(2, 2) },
-            [Orientation.Down] = new Pos[] { new(0, 1), new(1, 1), new(2, 1), new(0, 2) },
-            [Orientation.Left] = new Pos[] { new(0, 0), new(1, 0), new(1, 1), new(1, 2) }
+            [Orientation.Up] = new Pos[] { new(0, 1), new(1, 1), new(2, 1), new(2, 2) },
+            [Orientation.Right] = new Pos[] { new(1, 0), new(1, 1), new(1, 2), new(2, 0) },
+            [Orientation.Down] = new Pos[] { new(0, 0), new(0, 1), new(1, 1), new(2, 1) },
+            [Orientation.Left] = new Pos[] { new(0, 2), new(1, 2), new(1, 1), new(1, 0) }
         },
         KickTable = StandardKickTable
     };
@@ -104,10 +104,10 @@ public static class Pieces
         Name = "S",
         Rotations = new()
         {
-            [Orientation.Up] = new Pos[] { new(1, 0), new(2, 0), new(0, 1), new(1, 1) },
-            [Orientation.Right] = new Pos[] { new(1, 0), new(1, 1), new(2, 1), new(2, 2) },
-            [Orientation.Down] = new Pos[] { new(1, 1), new(2, 1), new(0, 2), new(1, 2) },
-            [Orientation.Left] = new Pos[] { new(0, 0), new(0, 1), new(1, 1), new(1, 2) }
+            [Orientation.Up] = new Pos[] { new(0, 1), new(1, 1), new(1, 2), new(2, 2) },
+            [Orientation.Right] = new Pos[] { new(1, 2), new(1, 1), new(2, 1), new(2, 0) },
+            [Orientation.Down] = new Pos[] { new(0, 0), new(1, 0), new(1, 1), new(1, 2) },
+            [Orientation.Left] = new Pos[] { new(0, 2), new(0, 1), new(1, 1), new(1, 0) }
         },
         KickTable = StandardKickTable
     };
@@ -117,10 +117,10 @@ public static class Pieces
         Name = "Z",
         Rotations = new()
         {
-            [Orientation.Up] = new Pos[] { new(0, 0), new(1, 0), new(1, 1), new(2, 1) },
-            [Orientation.Right] = new Pos[] { new(2, 0), new(1, 1), new(2, 1), new(1, 2) },
-            [Orientation.Down] = new Pos[] { new(0, 1), new(1, 1), new(1, 2), new(2, 2) },
-            [Orientation.Left] = new Pos[] { new(1, 0), new(0, 1), new(1, 1), new(0, 2) }
+            [Orientation.Up] = new Pos[] { new(0, 2), new(1, 2), new(1, 1), new(2, 1) },
+            [Orientation.Right] = new Pos[] { new(1, 0), new(1, 1), new(2, 1), new(2, 2) },
+            [Orientation.Down] = new Pos[] { new(0, 1), new(1, 1), new(1, 0), new(2, 0) },
+            [Orientation.Left] = new Pos[] { new(0, 0), new(0, 1), new(1, 1), new(1, 2) }
         },
         KickTable = StandardKickTable
     };
