@@ -59,7 +59,15 @@ public class UnitTest1
     }
 
     [Fact]
-    public void Test1()
+    public void Bag()
+    {
+        var q = new PieceQueue(0);
+        for (var i = 0; i < 1000; i++)
+            Console.WriteLine(q.Next().Name);
+    }
+
+    [Fact]
+    public void Tki()
     {
         var board = new Board();
 
