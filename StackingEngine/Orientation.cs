@@ -1,9 +1,10 @@
-namespace StackingEngine;
-
-public enum Orientation
+namespace StackingEngine
 {
-    Up,
-    Right,
-    Down,
-    Left
+    public enum Orientation
+    {
+        Up,
+        Right,
+        Down,
+        Left
+    }
 }

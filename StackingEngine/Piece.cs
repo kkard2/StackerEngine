@@ -1,8 +1,9 @@
-namespace StackingEngine;
-
-public record Piece
+namespace StackingEngine
 {
-    public required PieceType Type { get; init; }
-    public required Pos Pos { get; init; }
-    public required Orientation Rot { get; init; }
+    public record Piece
+    {
+        public PieceType Type { get; set; }
+        public Pos Pos { get; set; }
+        public Orientation Rot { get; set; }
+    }
 }

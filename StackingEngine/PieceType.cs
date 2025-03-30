@@ -1,9 +1,11 @@
-namespace StackingEngine;
+using System.Collections.Generic;
 
-public class PieceType
+namespace StackingEngine
 {
-    public required string Name { get; init; }
-
-    public required Dictionary<Orientation, Pos[]> Rotations { get; init; }
-    public required Dictionary<(Orientation, Orientation), Pos[]> KickTable { get; init; }
+    public class PieceType
+    {
+        public string Name { get; set;  }
+        public Dictionary<Orientation, Pos[]> Rotations { get; set; }
+        public Dictionary<(Orientation, Orientation), Pos[]> KickTable { get; set;  }
+    }
 }
